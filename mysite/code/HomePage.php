@@ -4,7 +4,8 @@ class HomePage extends Page {
 
     private static $db = array (
         'welcome_text' => 'HTMLText',
-        'btn_text' => 'Varchar'
+        'btn_text' => 'Varchar',
+        'about_page_link' => 'Varchar'
     );
 
     private static $has_many = array (
@@ -17,6 +18,7 @@ class HomePage extends Page {
 
         $fields->addFieldToTab('Root.Main', HtmlEditorField::create('welcome_text', 'Welcome Text')->setRows(5), 'Content');
         $fields->addFieldToTab('Root.Main', TextField::create('btn_text', 'Link Button Text'));
+        $fields->addFieldToTab('Root.Main', TextField::create('about_page_link', 'Link to About page'));
 
         // carousel
         $fields->addFieldToTab('Root.Carousel', GridField::create(

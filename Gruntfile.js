@@ -10,7 +10,8 @@ module.exports = function(grunt) {
                     optimization: 2
                 },
                 files: {
-                    "themes/superior-scaffolding/css/main.css": "themes/superior-scaffolding/less/main.less" // destination file and source file
+                    "themes/superior-scaffolding/css/main.css": "themes/superior-scaffolding/less/main.less",
+                    "themes/superior-scaffolding/css/homepage.css": "themes/superior-scaffolding/less/homepage.less"// destination file and source file
                 }
             }
         },
