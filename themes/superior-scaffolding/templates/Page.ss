@@ -2,6 +2,8 @@
 
 <% include Head %>
 
+<% include Nav %>
+
     $Layout
 
 <% include Footer %>
