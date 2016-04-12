@@ -6,8 +6,7 @@ project/
 /vendor/
 /cms/
 /framework/
-/vendor/
-/app/node_modules/
+/node_modules/
 /assets/
 /silverstripe-cache/
 /userforms/
