@@ -45,14 +45,6 @@ class HomePage extends Page {
         return $fields;
     }
 
-    //get userform
-    public function showForm() {
-        $record = DataObject::get_one("UserDefinedForm");
-        $results = new UserDefinedForm_Controller($record);
-
-        return $results;
-    }
-
 }
 
 class HomePage_Controller extends Page_Controller {

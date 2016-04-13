@@ -8,10 +8,12 @@
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
-        <% loop $carousel_images %>
-            <div class="item <% if Pos() == 1 %>active<% end_if %>">
-                <img src="$carousel_img.URL" alt="...">
-            </div>
+        <% loop $getCarousel %>
+            <% loop $carousel_images %>
+                <div class="item <% if Pos() == 1 %>active<% end_if %>">
+                    <img src="$carousel_img.URL" alt="...">
+                </div>
+            <% end_loop %>
         <% end_loop %>
     </div>
 

@@ -8,7 +8,7 @@
         </div>
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 homepage_content">
-            <div class="col-lg-9">
+            <div class="col-lg-9 left_content">
                 $Content
             </div>
 
@@ -26,6 +26,8 @@
                 <button>$btn_text</button>
             </a>
         </div>
+
+        <% include HR_Divider %>
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 homepage_lower_content">
             <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 latest_projects_wrapper">

@@ -7,6 +7,19 @@ class Page extends SiteTree {
 	private static $has_one = array(
 	);
 
+	// return homepage to get carousel items
+	public function getCarousel() {
+		return DataObject::get('HomePage');
+	}
+
+	// get userform
+	public function showForm() {
+		$record = DataObject::get_one("UserDefinedForm");
+		$results = new UserDefinedForm_Controller($record);
+
+		return $results;
+	}
+
 }
 class Page_Controller extends ContentController {
 

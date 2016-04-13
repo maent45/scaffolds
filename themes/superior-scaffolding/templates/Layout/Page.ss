@@ -1,2 +1,5 @@
-$Content
-$Form
+<div>
+    $Content
+    $Form
+</div>
+
