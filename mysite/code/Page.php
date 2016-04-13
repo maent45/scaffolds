@@ -20,6 +20,21 @@ class Page extends SiteTree {
 		return $results;
 	}
 
+	// get about page
+	public function getAboutPage() {
+		return DataObject::get_one('About');
+	}
+
+	// get residential page
+	public function getResidential() {
+		return DataObject::get_one('Residential');
+	}
+
+	// get commercial page
+	public function getCommercialPage() {
+		return DataObject::get_one('Commercial');
+	}
+
 }
 class Page_Controller extends ContentController {
 

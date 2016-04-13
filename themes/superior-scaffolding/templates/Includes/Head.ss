@@ -15,6 +15,7 @@
     <% require themedCSS('main') %>
     <% require themedCSS('homepage') %>
     <% require themedCSS('residential') %>
+    <% require themedCSS('commercial') %>
 </head>
 
 <body class="$ClassName">

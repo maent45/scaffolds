@@ -7,6 +7,10 @@ class About extends Page {
         'contact_link' => 'Varchar'
     );
 
+    private static $has_one = array (
+        'link_cover_img' => 'Image'
+    );
+
     private static $has_many = array (
         'About_content_blocks' => 'AboutContentBlock'
     );
@@ -28,6 +32,8 @@ class About extends Page {
         // contact btn
         $fields->addFieldToTab('Root.Main', TextField::create('contact_btn_txt', 'Contact Button Text'));
         $fields->addFieldToTab('Root.Main', TextField::create('contact_link', 'Contact Page Link'));
+
+        $fields->addFieldToTab('Root.Main', UploadField::create('link_cover_img', 'Page Cover Image (Shows at bottom of each page)'));
 
         return $fields;
     }

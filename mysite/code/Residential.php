@@ -11,6 +11,10 @@ class Residential extends Page {
         'Projects' => 'ResidentialProject'
     );
 
+    private static $has_one = array (
+        'link_cover_img' => 'Image'
+    );
+
     public function getCMSFields() {
         $fields = parent::getCMSFields();
 
@@ -35,6 +39,8 @@ class Residential extends Page {
         ));
 
         $fields->addFieldToTab('Root.Main', HtmlEditorField::create('reviews', 'Testimonials')->setRows(5));
+
+        $fields->addFieldToTab('Root.Main', UploadField::create('link_cover_img', 'Page Cover Image (Shows at bottom of each page)'));
 
         return $fields;
     }

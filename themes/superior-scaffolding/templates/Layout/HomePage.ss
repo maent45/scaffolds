@@ -48,6 +48,8 @@
             </div>
         </div>
 
+        <% include PageBottom %>
+
     </div>
 
 </div>

@@ -27,6 +27,8 @@
             <% include RenderForm %>
         </div>
 
+        <% include PageBottom %>
+
     </div>
 
 </div>
