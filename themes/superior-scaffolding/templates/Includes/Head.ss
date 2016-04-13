@@ -14,6 +14,7 @@
     <% require themedCSS('bootstrap.min') %>
     <% require themedCSS('main') %>
     <% require themedCSS('homepage') %>
+    <% require themedCSS('residential') %>
 </head>
 
 <body class="$ClassName">

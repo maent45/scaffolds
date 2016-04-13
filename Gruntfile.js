@@ -11,7 +11,8 @@ module.exports = function(grunt) {
                 },
                 files: {
                     "themes/superior-scaffolding/css/main.css": "themes/superior-scaffolding/less/main.less",
-                    "themes/superior-scaffolding/css/homepage.css": "themes/superior-scaffolding/less/homepage.less"// destination file and source file
+                    "themes/superior-scaffolding/css/homepage.css": "themes/superior-scaffolding/less/homepage.less",
+                    "themes/superior-scaffolding/css/residential.css": "themes/superior-scaffolding/less/residential.less" // destination file and source file
                 }
             }
         },

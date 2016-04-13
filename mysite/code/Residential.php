@@ -2,6 +2,10 @@
 
 class Residential extends Page {
 
+    private static $db = array (
+        'reviews' => 'HTMLText'
+    );
+
     private static $has_many = array (
         'Residential_content_blocks' => 'ResidentialContentBlock',
         'Projects' => 'ResidentialProject'
@@ -29,6 +33,8 @@ class Residential extends Page {
             $this->Projects(),
             GridFieldConfig_RecordEditor::create()
         ));
+
+        $fields->addFieldToTab('Root.Main', HtmlEditorField::create('reviews', 'Testimonials')->setRows(5));
 
         return $fields;
     }
