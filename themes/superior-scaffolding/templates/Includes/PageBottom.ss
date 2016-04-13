@@ -4,12 +4,14 @@
     <% if $getAboutPage %>
         <% with $getAboutPage %>
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 inner_wrapper">
-                <% if $link_cover_img %>
-                    <img src="$link_cover_img.URL">
-                <% end_if %>
-                <div>
-                    $Title
-                </div>
+                <a href="$Link">
+                    <% if $link_cover_img %>
+                        <img src="$link_cover_img.URL">
+                    <% end_if %>
+                    <div>
+                        $Title
+                    </div>
+                </a>
             </div>
         <% end_with %>
     <% end_if %>
@@ -17,12 +19,14 @@
     <% if $getResidential %>
         <% with $getResidential %>
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 inner_wrapper">
-                <% if $link_cover_img %>
-                    <img src="$link_cover_img.URL">
-                <% end_if %>
-                <div>
-                    $Title
-                </div>
+                <a href="$Link">
+                    <% if $link_cover_img %>
+                        <img src="$link_cover_img.URL">
+                    <% end_if %>
+                    <div>
+                        $Title
+                    </div>
+                </a>
             </div>
         <% end_with %>
     <% end_if %>
@@ -30,12 +34,14 @@
     <% if $getCommercialPage %>
         <% with $getCommercialPage %>
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 inner_wrapper">
-                <% if $link_cover_img %>
-                    <img src="$link_cover_img.URL">
-                <% end_if %>
-                <div>
-                    $Title
-                </div>
+                <a href="$Link">
+                    <% if $link_cover_img %>
+                        <img src="$link_cover_img.URL">
+                    <% end_if %>
+                    <div>
+                        $Title
+                    </div>
+                </a>
             </div>
         <% end_with %>
     <% end_if %>
