@@ -12,7 +12,7 @@
                         $content_block
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 residential_img">
-                        $content_image
+                        <img src="$content_image.URL">
                     </div>
                 </div>
             <% end_loop %>
@@ -27,8 +27,10 @@
         <!-- projects wrapper -->
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 projects_wrapper">
             <% loop $Projects %>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                    <img src="$image.URL">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 gallery">
+                    <a href="$image.URL" class="big">
+                        <img src="$image.URL">
+                    </a>
                 </div>
             <% end_loop %>
         </div>

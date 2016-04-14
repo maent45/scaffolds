@@ -33,8 +33,10 @@
             <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 latest_projects_wrapper">
                 <h2>$latest_projects_header</h2>
                 <% loop $latest_projects %>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <img src="$image.URL">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 gallery">
+                        <a href="$image.URL" class="big">
+                            <img src="$image.URL">
+                        </a>
                     </div>
                 <% end_loop %>
             </div>

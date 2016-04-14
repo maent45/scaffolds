@@ -12,6 +12,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
 
     <% require themedCSS('bootstrap.min') %>
+    <% require themedCSS('simplelightbox.min') %>
     <% require themedCSS('main') %>
     <% require themedCSS('homepage') %>
     <% require themedCSS('residential') %>
