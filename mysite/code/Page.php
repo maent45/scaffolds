@@ -20,6 +20,11 @@ class Page extends SiteTree {
 		return $results;
 	}
 
+	// get home page
+	public function getHomePage() {
+		return DataObject::get_one('HomePage');
+	}
+
 	// get about page
 	public function getAboutPage() {
 		return DataObject::get_one('About');

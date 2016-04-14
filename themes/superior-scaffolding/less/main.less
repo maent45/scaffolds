@@ -1,6 +1,7 @@
 // colors
 @blue: #0033CC;
 @light_gray: #E8EAF0;
+@lighter_gray :#F8FAFE;
 @red: #FC0000;
 
 // tags
@@ -62,6 +63,8 @@ body {
   background: @light_gray;
 }
 
+
+// navbar
 .navbar {
   margin: 0px;
   text-transform: uppercase;
@@ -81,6 +84,29 @@ body {
 }
 .navbar-default .navbar-nav>li>a {
   color: white;
+}
+
+// subnav
+.sub_nav {
+  background: @lighter_gray;
+  padding: 20px;
+  position: absolute;
+  z-index: 1;
+
+  .sub_nav_left {
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .sub_nav_right {
+
+    img {
+      width: initial;
+    }
+  }
+
 }
 
 .carousel {

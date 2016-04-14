@@ -8,12 +8,19 @@ class HomePage extends Page {
         'about_page_link' => 'Varchar',
         'latest_projects_header' => 'Varchar',
         'services_content' => 'HTMLText',
-        'testimonial_content' => 'HTMLText'
+        'testimonial_content' => 'HTMLText',
+        // sub nav
+        'site_slogan' => 'HTMLText',
+        'nav_contact_info' => 'HTMLText'
     );
 
     private static $has_many = array (
         'carousel_images' => 'CarouselObject',
         'latest_projects' => 'LatestProject'
+    );
+
+    private static $has_one = array (
+        'logo' => 'Image'
     );
 
     public function getCMSFields() {
@@ -41,6 +48,14 @@ class HomePage extends Page {
             $this->latest_projects(),
             GridFieldConfig_RecordEditor::create()
         ));
+
+        // sub nav
+        $fields->addFieldToTab('Root.NavigationItems', $logo_img = UploadField::create('logo', 'Site logo'));
+        $fields->addFieldToTab('Root.NavigationItems', HtmlEditorField::create('site_slogan', 'Site slogan')->setRows(5));
+        $fields->addFieldToTab('Root.NavigationItems', HtmlEditorField::create('nav_contact_info', 'Navigation Contact')->setRows(5));
+
+        $logo_img->setFolderName('navigation-images');
+        $logo_img->getValidator()->setAllowedExtensions(array('png','gif','jpeg','jpg','svg'));
 
         return $fields;
     }
