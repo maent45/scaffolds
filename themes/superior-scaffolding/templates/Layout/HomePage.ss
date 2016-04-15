@@ -1,6 +1,6 @@
 <% include Carousel %>
 
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 homepage_main_wrapper">
 
     <div class="container">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 homepage_welcome">
@@ -13,11 +13,7 @@
             </div>
 
             <div class="col-lg-3 homepage_form_wrapper">
-                <% if $showForm %>
-                    <% with $showForm %>
-                        $Form
-                    <% end_with %>
-                <% end_if %>
+                <% include RenderForm %>
             </div>
         </div>
 

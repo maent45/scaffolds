@@ -3,7 +3,9 @@
         <% if $HomePage %>
             <% with $HomePage %>
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 sub_nav_left">
-                    <img src="$logo.URL">
+                    <a href="$Link">
+                        <img src="$logo.URL">
+                    </a>
                 </div>
 
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 hidden-xs sub_nav_middle">
