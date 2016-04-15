@@ -11,7 +11,8 @@ class HomePage extends Page {
         'testimonial_content' => 'HTMLText',
         // sub nav
         'site_slogan' => 'HTMLText',
-        'nav_contact_info' => 'HTMLText'
+        'nav_contact_info' => 'HTMLText',
+        'contact_map_address' => 'Varchar'
     );
 
     private static $has_many = array (
@@ -56,6 +57,9 @@ class HomePage extends Page {
 
         $logo_img->setFolderName('navigation-images');
         $logo_img->getValidator()->setAllowedExtensions(array('png','gif','jpeg','jpg','svg'));
+
+        // contact info
+        $fields->addFieldToTab('Root.Contact Info', TextField::create('contact_map_address', 'Business Address'));
 
         return $fields;
     }

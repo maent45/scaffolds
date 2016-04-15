@@ -5,8 +5,14 @@
 
         <% include PageHeader %>
 
-        <div class="col-lg-4">
-
+        <div class="col-lg-4 map_wrapper">
+            <% if $HomePage %>
+                <% with $HomePage %>
+                    <address>
+                        $contact_map_address
+                    </address>
+                <% end_with %>
+            <% end_if %>
         </div>
         <div class="col-lg-4 generic_content_wrapper">
             $Content
