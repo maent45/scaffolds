@@ -1,6 +1,6 @@
 <% include Carousel %>
 
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 commercial_main_wrapper">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 commercial_main_outter_wrapper">
 
     <div class="container">
         <% include PageHeader %>
