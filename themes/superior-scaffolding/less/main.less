@@ -110,7 +110,7 @@ body {
 }
 
 .carousel {
-  height: 600px;
+  //height: 600px;
   overflow: hidden;
   position: relative;
 
@@ -265,4 +265,33 @@ footer {
   padding: 25px;
   color: white;
   margin: 15px 0px;
+}
+
+// media queries
+@media screen and (min-width: 315px) {
+
+  .carousel {
+    height: 300px;
+    top: 185px;
+  }
+
+  .homepage_main_wrapper {
+    top: 155px;
+  }
+
+  footer {
+    position: relative;
+    top: 145px;
+  }
+
+}
+
+@media screen and (min-width: 992px) {
+  .carousel {
+    height: 600px;
+    top: 0px;
+  }
+  .homepage_main_wrapper {
+    top: -30px;
+  }
 }
