@@ -20,10 +20,10 @@
         <div class="col-lg-4 generic_form_wrapper">
             $Form
         </div>
+
+        <% include PageBottom %>
+
     </div>
 
-
-
-    <% include PageBottom %>
 </div>
 

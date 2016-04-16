@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Brand</a>
+            <a class="navbar-brand" href="#" style="text-transform: initial;color: white;font-weight: normal;font-size: 16px;">Welcome to Superior Scaffolds!</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
