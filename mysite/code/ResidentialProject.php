@@ -18,4 +18,16 @@ class ResidentialProject extends DataObject {
         return $fields;
     }
 
+    public function getGridThumbnail() {
+        if($this->image()->exists()) {
+            return $this->image()->SetWidth(100);
+        }
+
+        return "(no image)";
+    }
+
+    private static $summary_fields = array (
+        'GridThumbnail' => 'Image'
+    );
+
 }

@@ -23,4 +23,17 @@ class ResidentialContentBlock extends DataObject {
         return $fields;
     }
 
+    public function getGridThumbnail() {
+        if($this->content_image()->exists()) {
+            return $this->content_image()->SetWidth(100);
+        }
+
+        return "(no image)";
+    }
+
+    private static $summary_fields = array (
+        'content_block.Summary' => 'Content',
+        'GridThumbnail' => 'Image'
+    );
+
 }

@@ -19,4 +19,16 @@ class CarouselObject extends DataObject {
         return $fields;
     }
 
+    public function getGridThumbnail() {
+        if($this->carousel_img()->exists()) {
+            return $this->carousel_img()->SetWidth(100);
+        }
+
+        return "(no image)";
+    }
+
+    private static $summary_fields = array (
+        'GridThumbnail' => 'Image'
+    );
+
 }

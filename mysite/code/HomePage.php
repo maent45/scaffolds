@@ -59,7 +59,7 @@ class HomePage extends Page {
         $logo_img->getValidator()->setAllowedExtensions(array('png','gif','jpeg','jpg','svg'));
 
         // contact info
-        $fields->addFieldToTab('Root.Contact Info', TextField::create('contact_map_address', 'Business Address'));
+        $fields->addFieldToTab('Root.Business Address', TextField::create('contact_map_address', 'Business Address'));
 
         return $fields;
     }
