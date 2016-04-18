@@ -8,7 +8,7 @@
         <div class="col-lg-4 map_wrapper">
             <% if $HomePage %>
                 <% with $HomePage %>
-                    <address>
+                    <address class="google_map">
                         $contact_map_address
                     </address>
                 <% end_with %>
