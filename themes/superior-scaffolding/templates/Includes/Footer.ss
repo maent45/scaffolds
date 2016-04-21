@@ -1,4 +1,4 @@
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 top_footer_sec_wrapper">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-sm hidden-xs top_footer_sec_wrapper">
     <div class="container">
         <div class="col-lg-2 col-md-3 col-sm-12 col-xs-12">
             <% loop $getHomePage %>
@@ -55,7 +55,7 @@
     </div>
 </div>
 
-<footer class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<footer class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-xs">
     <div class="container">
         <p>Superior Scaffolds © 2016 | All rights reserved</p>
     </div>
