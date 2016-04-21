@@ -12,7 +12,12 @@ class HomePage extends Page {
         // sub nav
         'site_slogan' => 'HTMLText',
         'nav_contact_info' => 'HTMLText',
-        'contact_map_address' => 'Varchar'
+        'contact_map_address' => 'Varchar',
+        // TEMP SOLUTION
+        // footer contact info
+        'contact_info' => 'HTMLText',
+        'postal_address' => 'HTMLText',
+        'location' => 'HTMLText'
     );
 
     private static $has_many = array (
@@ -51,15 +56,23 @@ class HomePage extends Page {
         ));
 
         // sub nav
-        $fields->addFieldToTab('Root.NavigationItems', $logo_img = UploadField::create('logo', 'Site logo'));
-        $fields->addFieldToTab('Root.NavigationItems', HtmlEditorField::create('site_slogan', 'Site slogan')->setRows(5));
-        $fields->addFieldToTab('Root.NavigationItems', HtmlEditorField::create('nav_contact_info', 'Navigation Contact')->setRows(5));
+        $fields->addFieldToTab('Root.SubNavigationItems', $logo_img = UploadField::create('logo', 'Site logo'));
+        $fields->addFieldToTab('Root.SubNavigationItems', HtmlEditorField::create('site_slogan', 'Site slogan')->setRows(5));
+        $fields->addFieldToTab('Root.SubNavigationItems', HtmlEditorField::create('nav_contact_info', 'Navigation Contact')->setRows(5));
 
         $logo_img->setFolderName('navigation-images');
         $logo_img->getValidator()->setAllowedExtensions(array('png','gif','jpeg','jpg','svg'));
 
         // contact info
         $fields->addFieldToTab('Root.Business Address', TextField::create('contact_map_address', 'Business Address'));
+
+        // TEMP SOLUTION
+        /*'contact_info' => 'HTMLText',
+        'postal_address' => 'HTMLText',
+        'location' => 'HTMLText'*/
+        $fields->addFieldToTab('Root.FooterContactInfo', HtmlEditorField::create('contact_info', 'Contact Info')->setRows(5));
+        $fields->addFieldToTab('Root.FooterContactInfo', HtmlEditorField::create('postal_address', 'Postal Address')->setRows(5));
+        $fields->addFieldToTab('Root.FooterContactInfo', HtmlEditorField::create('location', 'Location')->setRows(5));
 
         return $fields;
     }
