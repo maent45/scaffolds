@@ -94,44 +94,21 @@ body {
   color: @blue;
 }
 
-// subnav
-.sub_nav {
-  background: @lighter_gray;
-  padding: 20px;
-  position: absolute;
-  z-index: 1;
-  -webkit-box-shadow: 0px 2px 21px 0px rgba(50, 50, 50, 0.42);
-  -moz-box-shadow:    0px 2px 21px 0px rgba(50, 50, 50, 0.42);
-  box-shadow:         0px 2px 21px 0px rgba(50, 50, 50, 0.42);
-
-  .sub_nav_left {
-
-    img {
-      width: 80%;
-    }
-  }
-
-  .sub_nav_right {
-
-    p,
-    h1,
-    h2,
-    h3,
-    h4 {
-      margin: 0px;
-    }
-
-    img {
-      width: initial;
-    }
-  }
-
-}
-
 .carousel {
-  //height: 600px;
   overflow: hidden;
   position: relative;
+
+  .carousel-inner {
+    position: absolute;
+    width: 500px;
+    overflow: hidden;
+    background: green;
+    height: 300px;
+    top: 155px;
+    right: 150px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
 
   .carousel_bottom_overlay {
     background: #222;
@@ -344,6 +321,62 @@ footer {
 // media queries
 @media screen and (min-width: 315px) {
 
+  // subnav
+  .sub_nav {
+    background: @lighter_gray;
+    padding: 0px;
+    position: absolute;
+    z-index: 1;
+    -webkit-box-shadow: 0px 2px 21px 0px rgba(50, 50, 50, 0.42);
+    -moz-box-shadow:    0px 2px 21px 0px rgba(50, 50, 50, 0.42);
+    box-shadow:         0px 2px 21px 0px rgba(50, 50, 50, 0.42);
+    height: auto;
+
+    .sub_nav_left {
+      float: none;
+      position: relative;
+      background: orange;
+      height: auto;
+      border-radius: 0px;
+      width: 100%;
+      padding: 10px 0px;
+      margin: 0px;
+      text-align: center;
+
+      img {
+        top: 20px;
+        right: 0px;
+        width: 200px;
+      }
+    }
+
+    .sub_nav_middle,
+    .sub_nav_right {
+      width: 100%;
+      display: inline-block;
+      background: gray;
+      margin: 0px;
+      float: none;
+      padding: 15px 30px;
+      box-sizing: border-box;
+    }
+
+    .sub_nav_right {
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        margin: 0px;
+      }
+
+      img {
+        width: initial;
+      }
+    }
+
+  }
+
   .carousel {
     height: 165px;
     top: 175px;
@@ -379,13 +412,31 @@ footer {
 }
 
 @media screen and (min-width: 992px) {
+
+  .sub_nav {
+
+    .sub_nav_left {
+      width: 400px;
+      position: absolute;
+      background: #F8FAFE;
+      display: inline-block;
+      height: 130px;
+      top: 0;
+      border-bottom-right-radius: 120px;
+      text-align: right;
+      margin: 0 75px 0 0;
+      float: left;
+    }
+
+  }
+
   .carousel {
     height: 550px;
     top: 0px;
 
     img {
       position: relative;
-      top: 110px;
+      top: 0px;
     }
   }
   .homepage_main_wrapper {
@@ -404,6 +455,18 @@ footer {
 
   footer {
     top: 0px;
+  }
+
+}
+
+@media screen and (min-width: 1224px) {
+
+  .sub_nav {
+
+    .sub_nav_left {
+      width: 550px;
+    }
+
   }
 
 }
