@@ -98,18 +98,6 @@ body {
   overflow: hidden;
   position: relative;
 
-  .carousel-inner {
-    position: absolute;
-    width: 500px;
-    overflow: hidden;
-    background: green;
-    height: 300px;
-    top: 155px;
-    right: 150px;
-    padding: 0px;
-    box-sizing: border-box;
-  }
-
   .carousel_bottom_overlay {
     background: #222;
     width: 100%;
@@ -357,7 +345,7 @@ footer {
       background: gray;
       margin: 0px;
       float: none;
-      padding: 15px 30px;
+      padding: 5px 30px;
       box-sizing: border-box;
     }
 
@@ -378,8 +366,21 @@ footer {
   }
 
   .carousel {
-    height: 165px;
-    top: 175px;
+    height: 275px;
+    top: 220px;
+
+    .carousel-inner {
+      position: absolute;
+      width: 100%;
+      overflow: hidden;
+      background: green;
+      height: 100%;
+      top: 0px;
+      right: 0px;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
   }
 
   .homepage_main_wrapper {
@@ -407,6 +408,14 @@ footer {
 
   .carousel {
     height: 250px;
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+
+  .carousel {
+    top: 195px;
   }
 
 }
