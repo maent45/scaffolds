@@ -342,7 +342,6 @@ footer {
     .sub_nav_right {
       width: 100%;
       display: inline-block;
-      background: gray;
       margin: 0px;
       float: none;
       padding: 5px 30px;
@@ -366,14 +365,13 @@ footer {
   }
 
   .carousel {
-    height: 275px;
+    height: 225px;
     top: 220px;
 
     .carousel-inner {
       position: absolute;
       width: 100%;
       overflow: hidden;
-      background: green;
       height: 100%;
       top: 0px;
       right: 0px;
@@ -415,7 +413,21 @@ footer {
 @media screen and (min-width: 768px) {
 
   .carousel {
+    height: 350px;
     top: 195px;
+
+    .carousel-inner {
+      width: 300px;
+      height: 200px;
+      position: absolute;
+      top: 50px;
+      right: 45px;
+    }
+
+    img {
+      border: 10px solid white;
+    }
+
   }
 
 }
@@ -435,6 +447,19 @@ footer {
       text-align: right;
       margin: 0 75px 0 0;
       float: left;
+
+      img {
+        position: absolute;
+        top: 35px;
+        left: 75px;
+      }
+
+    }
+
+    .sub_nav_middle,
+    .sub_nav_right {
+      width: 260px;
+      float: right;
     }
 
   }
@@ -446,6 +471,12 @@ footer {
     img {
       position: relative;
       top: 0px;
+    }
+
+    .carousel-inner {
+      width: 450px;
+      height: 250px;
+      top: 200px;
     }
   }
   .homepage_main_wrapper {
@@ -473,7 +504,31 @@ footer {
   .sub_nav {
 
     .sub_nav_left {
+      height: 125px;
       width: 550px;
+
+      img {
+        left: 215px;
+        width: 250px;
+      }
+    }
+
+    .sub_nav_middle,
+    .sub_nav_right {
+      width: 315px;
+      left: -7.5%;
+      position: relative;
+    }
+
+  }
+
+  .carousel {
+
+    .carousel-inner {
+      width: 600px;
+      height: 350px;
+      top: 125px;
+      left: 48.5%;
     }
 
   }

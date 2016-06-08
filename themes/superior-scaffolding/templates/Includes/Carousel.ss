@@ -1,5 +1,9 @@
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 
+    <div class="carousel_desc_wrapper">
+
+    </div>
+
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
         <% loop $getCarousel %>
