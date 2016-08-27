@@ -3,12 +3,14 @@
     <div class="carousel_inner_content_wrapper">
         <% if $getHomePage %>
             <% loop $getHomePage %>
-                <div class="carousel_desc_wrapper">
-                    $carousel_desc
-                    <a href="$banner_overview_page_link.Link">
-                        <button>READ MORE</button>
-                    </a>
-                </div>
+                <% if $carousel_desc %>
+                    <div class="carousel_desc_wrapper">
+                        $carousel_desc
+                        <a href="$banner_overview_page_link.Link">
+                            <button>READ MORE</button>
+                        </a>
+                    </div>
+                <% end_if %>
             <% end_loop %>
         <% end_if %>
 
