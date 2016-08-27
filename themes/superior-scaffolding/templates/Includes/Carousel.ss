@@ -1,5 +1,7 @@
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-
+    <div class="carousel_background_img_wrapper">
+        $banner_background_img
+    </div>
     <div class="carousel_inner_content_wrapper">
         <% if $getHomePage %>
             <% loop $getHomePage %>

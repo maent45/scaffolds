@@ -29,7 +29,8 @@ class HomePage extends Page {
 
     private static $has_one = array (
         'logo' => 'Image',
-        'banner_overview_page_link' => 'Page'
+        'banner_overview_page_link' => 'Page',
+        'banner_background_img' => 'Image'
     );
 
     public function getCMSFields() {
@@ -42,6 +43,7 @@ class HomePage extends Page {
         $fields->addFieldToTab('Root.Main', HtmlEditorField::create('testimonial_content', 'Testimonials/Partners'));
 
         // carousel
+        $fields->addFieldToTab('Root.Carousel', UploadField::create('banner_background_img', 'Banner background image'));
         $fields->addFieldToTab('Root.Carousel', HtmlEditorField::create('carousel_desc', 'Banner overview'));
         $fields->addFieldToTab('Root.Carousel', new TreeDropdownField("banner_overview_page_linkID", "(READ MORE) Select a page to link to", "SiteTree"));
         $fields->addFieldToTab('Root.Carousel', GridField::create(
